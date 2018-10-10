@@ -1,0 +1,9 @@
+{
+    "name": "scaleplan/nginx-geo",
+    "description": "Reading headers from nginx geo module",
+    "autoload": {
+        "psr-4": {
+            "Scaleplan\\NginxGeo\\": "src/"
+        }
+    }
+}
