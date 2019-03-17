@@ -48,9 +48,8 @@ class NginxGeo implements NginxGeoInterface
      *
      * @param array $get
      */
-    protected function __construct(
-        array $get = []
-    ) {
+    protected function __construct(array $get = [])
+    {
         $this->ip = $_SERVER['REMOTE_ADDR'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
         $this->countryCode = $get['nginx_country_code'] ?? '';
         $this->regionCode = $get['nginx_region_code'] ?? '';
@@ -62,7 +61,7 @@ class NginxGeo implements NginxGeoInterface
      *
      * @return string
      */
-    public function getIP(): string
+    public function getIP() : string
     {
         return $this->ip;
     }
@@ -72,7 +71,7 @@ class NginxGeo implements NginxGeoInterface
      *
      * @return string
      */
-    public function getCountryCode(): string
+    public function getCountryCode() : string
     {
         return $this->countryCode;
     }
@@ -82,7 +81,7 @@ class NginxGeo implements NginxGeoInterface
      *
      * @return string
      */
-    public function getRegionCode(): string
+    public function getRegionCode() : string
     {
         return $this->regionCode;
     }
@@ -92,7 +91,7 @@ class NginxGeo implements NginxGeoInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
