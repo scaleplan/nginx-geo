@@ -51,9 +51,9 @@ class NginxGeo implements NginxGeoInterface
     protected function __construct(array $get = [])
     {
         $this->ip = $_SERVER['REMOTE_ADDR'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? '';
-        $this->countryCode = $get['NGINX_COUNTRY_CODE'] ?? '';
-        $this->regionCode = $get['NGINX_REGION'] ?? '';
-        $this->city = $get['NGINX_CITY'] ?? '';
+        $this->countryCode = $get['GEOIP_COUNTRY_CODE'] ?? '';
+        $this->regionCode = $get['GEOIP_REGION'] ?? '';
+        $this->city = $get['GEOIP_CITY'] ?? '';
     }
 
     /**
